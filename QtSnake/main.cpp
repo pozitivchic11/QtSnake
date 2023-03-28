@@ -7,6 +7,7 @@ int main(int argc, char *argv[])
 
     Game snakeGame;
     
+    snakeGame.setWindowTitle("Snake");
     snakeGame.show();
 
     return app.exec();
