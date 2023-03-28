@@ -3,6 +3,10 @@
 #include <QtWidgets/QWidget>
 #include <map>
 #include <QKeyEvent>
+#include <qmessagebox.h>
+#include <qpoint.h>
+#include <QRandomGenerator>
+#include <random>
 
 #include "ui_gameWindow.h"
 
@@ -40,12 +44,16 @@ private:
 
     bool game_state;
 
-    std::map<int, int> snakePoints;
-    std::pair<int, int> applePoint;
+    std::vector<QPoint> snakePoints;
+    QPoint applePoint;
 
     Directions dir;
 
     void initGame();
     void doDrawing();
     void locateApple();
+    void move();
+    void checkBorders();
+    void gameOver();
+    void checkApple();
 };
