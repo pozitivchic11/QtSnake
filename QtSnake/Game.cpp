@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "MainWindow.h"
 
 #include <QPainter>
 #include <random>
@@ -129,8 +130,17 @@ void Game::gameOver()
 {
     QMessageBox msg;
     
-    msg.setText("Game Over!");
-    msg.exec();
+    backToMenu = QMessageBox::question(this, "BackToMenu", "Do you wanna back to main menu?", QMessageBox::Yes | QMessageBox::No);
+    
+    switch (backToMenu)
+    {
+    case QMessageBox::Yes:
+        this->close();
+        emit backToMain();
+        break;
+    case QMessageBox::No:
+        break;
+    }
 
     initGame();
 }

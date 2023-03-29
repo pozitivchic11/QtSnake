@@ -31,6 +31,9 @@ protected:
     void keyPressEvent(QKeyEvent*) override;
     void paintEvent(QPaintEvent*) override;
 
+signals:
+    void backToMain();
+
 private:
     Ui::GameClass ui;
 
@@ -41,6 +44,7 @@ private:
     static const int DELAY = 150;
 
     int timerId;
+    int backToMenu;
 
     bool game_state;
 
