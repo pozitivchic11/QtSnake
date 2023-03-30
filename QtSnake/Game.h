@@ -32,7 +32,7 @@ protected:
     void paintEvent(QPaintEvent*) override;
 
 signals:
-    void backToMain();
+    void goToGame();
 
 private:
     Ui::GameClass ui;

@@ -5,10 +5,13 @@ MainWindow::MainWindow(QMainWindow* parent) : QWidget(parent)
 	ui.setupUi(this);
 
 	game = new Game();
+	settings = new Settings();
 
-	connect(game, &Game::backToMain, this, &Game::show);
+	connect(game, &Game::goToGame, this, &Game::show);
+	connect(settings, &Settings::goToSettings, this, &Settings::show);
 
 	connect(ui.startButton, &QPushButton::clicked, this, &MainWindow::startButton);
+	connect(ui.settingsButton, &QPushButton::clicked, this, &MainWindow::settingsButton);
 	connect(ui.exitButton, &QPushButton::clicked, this, &MainWindow::exitButton);
 }
 
@@ -18,6 +21,12 @@ void MainWindow::startButton()
 {
 	this->close();
 	game->show();
+}
+
+void MainWindow::settingsButton()
+{
+	this->close();
+	settings->show();
 }
 
 void MainWindow::exitButton()

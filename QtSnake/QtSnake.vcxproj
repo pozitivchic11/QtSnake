@@ -84,15 +84,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="Settings.cpp" />
     <QtRcc Include="Game.qrc" />
     <QtUic Include="gameWindow.ui" />
     <QtMoc Include="Game.h" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <QtUic Include="mainWindow.ui" />
+    <QtUic Include="settingsWindow.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MainWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Settings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mainWindowStyle.css" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

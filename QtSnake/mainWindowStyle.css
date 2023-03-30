@@ -1,0 +1,24 @@
+MainWindow {
+    background-color: aquamarine;
+}
+
+Settings
+{
+    background-color: aquamarine;
+}
+
+Game
+{
+    background-color: darkkhaki;
+}
+
+QPushButton
+{
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+QLabel
+{
+    color: brown;
+}

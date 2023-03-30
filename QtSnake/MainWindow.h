@@ -6,6 +6,7 @@
 
 #include "ui_mainWindow.h"
 #include "Game.h"
+#include "Settings.h"
 
 class MainWindow : public QWidget
 {
@@ -19,8 +20,10 @@ private:
 	Ui::MainWindowClass ui;
 
 	Game* game;
+	Settings* settings;
 
 private slots:
 	void startButton();
+	void settingsButton();
 	void exitButton();
 };

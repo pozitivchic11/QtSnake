@@ -136,7 +136,8 @@ void Game::gameOver()
     {
     case QMessageBox::Yes:
         this->close();
-        emit backToMain();
+        emit goToGame();
+
         break;
     case QMessageBox::No:
         break;
