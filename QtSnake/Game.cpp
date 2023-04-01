@@ -59,6 +59,7 @@ void Game::doDrawing()
         {
             if (i == 0)
             {
+                
                 painter.setBrush(Qt::white);
                 painter.drawEllipse(snakePoints[i].x() * DOT_WIDTH, snakePoints[i].y() * DOT_HEIGHT, DOT_WIDTH, DOT_HEIGHT);
             }
@@ -158,7 +159,8 @@ void Game::checkApple()
 void Game::initGame()
 {
     game_state = true;
-    dir = RIGHT;
+    
+    dir = STAY;
 
     snakePoints.resize(3);
 

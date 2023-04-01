@@ -9,7 +9,7 @@ MainWindow::MainWindow(QMainWindow* parent) : QWidget(parent)
 
 	connect(game, &Game::goToGame, this, &Game::show);
 	connect(settings, &Settings::goToSettings, this, &Settings::show);
-
+	
 	connect(ui.startButton, &QPushButton::clicked, this, &MainWindow::startButton);
 	connect(ui.settingsButton, &QPushButton::clicked, this, &MainWindow::settingsButton);
 	connect(ui.exitButton, &QPushButton::clicked, this, &MainWindow::exitButton);

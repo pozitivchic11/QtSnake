@@ -15,7 +15,8 @@ enum Directions
     LEFT,
     RIGHT,
     UP,
-    DOWN
+    DOWN,
+    STAY
 };
 
 class Game : public QWidget
