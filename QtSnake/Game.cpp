@@ -1,5 +1,4 @@
 #include "Game.h"
-#include "MainWindow.h"
 
 #include <QPainter>
 #include <random>
@@ -57,15 +56,19 @@ void Game::doDrawing()
         
         for (int i = 0; i < snakePoints.size(); ++i)
         {
-            if (i == 0)
+            if(i != 0)
             {
+                painter.setBrush(color);
                 
-                painter.setBrush(Qt::white);
                 painter.drawEllipse(snakePoints[i].x() * DOT_WIDTH, snakePoints[i].y() * DOT_HEIGHT, DOT_WIDTH, DOT_HEIGHT);
             }
             else
             {
-                painter.setBrush(Qt::green);
+                if (!checkHeadColor) {
+                    painter.setBrush(Qt::white);
+                }
+                else { painter.setBrush(color); }
+
                 painter.drawEllipse(snakePoints[i].x() * DOT_WIDTH, snakePoints[i].y() * DOT_HEIGHT, DOT_WIDTH, DOT_HEIGHT);
             }
         }
@@ -173,4 +176,29 @@ void Game::initGame()
     locateApple();
 
     timerId = startTimer(DELAY);
+}
+
+void Game::setSnakeColor(const QString& color)
+{
+    if (color == "Green")
+    {
+        this->color = Qt::green;
+    }
+    else if (color == "Red")
+    {
+        this->color = Qt::red;
+    }
+    else if (color == "Yellow")
+    {
+        this->color = Qt::yellow;
+    }
+    else if (color == "Black")
+    {
+        this->color = Qt::black;
+    }
+}
+
+void Game::setHeadColor(const bool& boolean)
+{
+    checkHeadColor = boolean;
 }

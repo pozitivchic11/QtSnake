@@ -9,6 +9,7 @@
 #include <random>
 
 #include "ui_gameWindow.h"
+#include "Settings.h"
 
 enum Directions
 {
@@ -26,6 +27,9 @@ class Game : public QWidget
 public:
     Game(QWidget *parent = nullptr);
     ~Game();
+
+    void setSnakeColor(const QString& color);
+    void setHeadColor(const bool& boolean);
 
 protected:
     void timerEvent(QTimerEvent*) override;
@@ -48,9 +52,11 @@ private:
     int backToMenu;
 
     bool game_state;
+    bool checkHeadColor;
 
     std::vector<QPoint> snakePoints;
     QPoint applePoint;
+    Qt::GlobalColor color;
 
     Directions dir;
 

@@ -100,6 +100,7 @@
     <QtMoc Include="Settings.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="mainDarkWindowStyle.css" />
     <None Include="mainWindowStyle.css" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

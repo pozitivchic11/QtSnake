@@ -11,13 +11,14 @@ public:
 	Settings(QWidget *parent = nullptr);
 	~Settings();
 
-	QString getSnakeColor();
-
-private slots:
-	void backToMenu();
+	QString& getSnakeColor();
+	bool getHeadState();
 
 signals:
 	void goToSettings();
+
+private slots:
+	void backToMenu();
 
 private:
 	Ui::SettingsClass ui;

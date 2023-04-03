@@ -56,21 +56,11 @@
    <property name="currentIndex">
     <number>0</number>
    </property>
-   <widget class="QWidget" name="tab">
+   <widget class="QWidget" name="tabVideo">
     <attribute name="title">
      <string>Video</string>
     </attribute>
-    <widget class="QComboBox" name="themeBox">
-     <property name="geometry">
-      <rect>
-       <x>115</x>
-       <y>55</y>
-       <width>170</width>
-       <height>22</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLabel" name="mainTheme">
+    <widget class="QLabel" name="mainThemeLabel">
      <property name="geometry">
       <rect>
        <x>100</x>
@@ -86,10 +76,10 @@
       </font>
      </property>
      <property name="text">
-      <string>           Theme:</string>
+      <string>     Head color:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="snakeColorLabel">
      <property name="geometry">
       <rect>
        <x>100</x>
@@ -118,8 +108,26 @@
       </rect>
      </property>
     </widget>
+    <widget class="QCheckBox" name="checkTheme">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>55</y>
+       <width>170</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Head color as body</string>
+     </property>
+    </widget>
    </widget>
-   <widget class="QWidget" name="tab_2">
+   <widget class="QWidget" name="tabDifficulty">
     <attribute name="title">
      <string>Difficulty</string>
     </attribute>

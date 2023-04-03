@@ -15,11 +15,19 @@ MainWindow::MainWindow(QMainWindow* parent) : QWidget(parent)
 	connect(ui.exitButton, &QPushButton::clicked, this, &MainWindow::exitButton);
 }
 
-MainWindow::~MainWindow() {}
+MainWindow::~MainWindow() 
+{
+	delete game;
+	delete settings;
+}
 
 void MainWindow::startButton()
 {
 	this->close();
+
+	game->setSnakeColor(settings->getSnakeColor());
+	game->setHeadColor(settings->getHeadState());
+
 	game->show();
 }
 

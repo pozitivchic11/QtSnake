@@ -19,3 +19,19 @@ void Settings::backToMenu()
 	this->close();
 	emit goToSettings();
 }
+
+QString& Settings::getSnakeColor() 
+{ 
+	color = ui.snakeColorBox->currentText();
+
+	return color; 
+}
+
+bool Settings::getHeadState()
+{
+	if (ui.checkTheme->isChecked())
+	{
+		return true;
+	}
+	else { return false; }
+}

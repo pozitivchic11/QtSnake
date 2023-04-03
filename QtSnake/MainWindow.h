@@ -19,7 +19,6 @@ public:
 private:
 	Ui::MainWindowClass ui;
 
-public:
 	Game* game;
 	Settings* settings;
 

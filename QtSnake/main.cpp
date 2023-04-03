@@ -4,11 +4,16 @@
 #include <QtWidgets/QApplication>
 #include <QFile>
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
     MainWindow mainWindow;
-    QFile mainWindowStyle("mainWindowStyle.css");
+
+    QString themePath;
+
+    themePath = "mainWindowStyle.css";
+
+    QFile mainWindowStyle(themePath);
 
     try 
     {

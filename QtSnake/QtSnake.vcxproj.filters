@@ -65,5 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="mainWindowStyle.css" />
+    <None Include="mainDarkWindowStyle.css" />
   </ItemGroup>
 </Project>
